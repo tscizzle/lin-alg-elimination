@@ -7,10 +7,10 @@ from time import perf_counter
 def tyler_elimination_solver(A, b):
     """ Solve the equation Ax=b by elimination.
 
-    :param ndarray A: (n x n) coefficient matrix
-    :param ndarray b: (n x 1) constant vector
+    :param np.array A: (n x n) coefficient matrix
+    :param np.array b: (n x 1) constant vector
 
-    :return ndarray x: (n x 1) solution vector (None if no solution exists)
+    :return np.array x: (n x 1) solution vector (None if no solution exists)
     """
     n = len(A)
 
@@ -66,7 +66,7 @@ def random_matrix(m, n, bounds=(-100, 100)):
     :param int n: Number of columns of the matrix to create.
     :param (float, float) bounds: Lower and upper bound the random values are in.
 
-    :return ndarray:
+    :return np.array:
     """
     # For each value, get a random value between 0 and 1, scale it to the size of the
     # bounds, then shift it to start at the lower bound.
@@ -79,8 +79,8 @@ def evaluate_solver_runtime(solver, up_to_n=100, trials_per_n=10):
     """ Time the runtime of the elimination solver as the size of the problem increases,
         and chart the result.
 
-    :param func(A,b)->x solver: Function that takes A as an ndarray (n x n) and b as an
-        ndarray (n x 1) and returns x as an ndarray (n x 1)
+    :param func(A,b)->x solver: Function that takes A as an np.array (n x n) and b as an
+        np.array (n x 1) and returns x as an np.array (n x 1)
     :param int up_to_n: Time the solver for matrix sizes up to this.
     :param int trials_per_n: Number of solves at each matrix size, to increase accuracy.
     """
