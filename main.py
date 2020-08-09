@@ -10,7 +10,7 @@ def tyler_elimination_solver(A, b):
     :param ndarray A: (n x n) coefficient matrix
     :param ndarray b: (n x 1) constant vector
 
-    :return ndarray x: (n x 1) solution vector
+    :return ndarray x: (n x 1) solution vector (None if no solution exists)
     """
     n = len(A)
 
